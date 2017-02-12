@@ -17,6 +17,8 @@ def generate_names(count, gender):
 
 def main():
 
+    correct_choices = ["M", "F", "R", ""]
+
     # Number of names to generate
     try:
         count = input("Choose number of names (1-1000) (default: 1) ")
@@ -35,7 +37,7 @@ def main():
 
     # Gender settings
     gender = input("Choose gender (m)ale / (f)emale / (r)andom (default: (r)andom): ").upper()
-    if gender not in["M", "F", "R", ""]:
+    if gender not in correct_choices:
         print("Wrong choice. Please try again.")
         sys.exit(2)
 
